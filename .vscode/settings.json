@@ -1,0 +1,35 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Pranay",
+            "database": "PranayClass1",
+            "username": "Pranay22"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Pranay",
+            "database": "PranayKaData",
+            "username": "root",
+            "password": ""
+        }
+    ],
+    "files.associations": {
+        "xstring": "cpp",
+        "iostream": "cpp"
+    }
+}
