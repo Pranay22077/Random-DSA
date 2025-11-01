@@ -10,9 +10,8 @@ This repository includes implementations for the following topics:
 - **Fibonacci Series** - Fibonacci sequence generation implementations
 - **Recursion** - Recursive algorithms including:
   - Factorial calculation
-  - Binary search
-  - Merge sort
-  - Quick sort
+  - Head Recusrion
+  - Tail Recursion
   - Sum of first N numbers
 - **Prime Numbers** - Prime factorization and prime/composite checking
 - **Number Operations**:
@@ -20,22 +19,6 @@ This repository includes implementations for the following topics:
   - Number rotation
   - Inverse of a number
   - GCD and LCM calculations
-
-## 📂 Repository Structure
-
-```
-Random-DSA/
-├── pattern problems/      # Various pattern printing programs
-├── fibonacci series/      # Fibonacci sequence implementations
-├── recursion/            # Recursive algorithms and sorting
-├── prime factorization/  # Prime number related programs
-├── prime or composite/   # Prime checking algorithms
-├── digits of a number/   # Digit manipulation programs
-├── rotate a number/      # Number rotation programs
-├── inverse of a number/  # Number inverse operations
-├── gcd and lcm/         # GCD and LCM calculations
-└── timepass/            # Miscellaneous programs
-```
 
 ## 🚀 Getting Started
 
