@@ -1,52 +1,34 @@
-#include <iostream>
-using namespace std;
+#include "Diagonal.h"
 
-struct Matrix{
-    int A[10];
-    int n;
-};
-
-void Set(struct Matrix *m, int i, int j, int num){
-    if (i == j){
-        m -> A[i-1] = num;
-    }
+Diagonal::Diagonal(int n) {
+    this->n = n;
+    A = new int[n];
 }
 
-int Get(struct Matrix m, int i, int j){
-    if (i == j){
-        return m.A[i-1];
-    } else {
-        return 0;
-    }
+void Diagonal::Set(int i, int j, int num) {
+    if (i == j)
+        A[i - 1] = num;
 }
 
-void Display(struct Matrix m){
-    for (int i = 0; i < m.n; i++){
-        for (int j = 0; j< m.n; j++){
-            if (i == j){
-                printf("%d ",m.A[i]);
-            } else {
-                printf("0 ");
-            }
+int Diagonal::Get(int i, int j) {
+    if (i == j)
+        cout << A[i - 1];
+    else
+        cout << 0;
+}
+
+void Diagonal::Display() {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j)
+                cout << A[i] << " ";
+            else
+                cout << "0 ";
         }
-        printf("\n");
+        cout << endl;
     }
 }
 
-int main(){
-    struct Matrix mat;
-
-    cout << "Enter order of square matrix: ";
-    scanf("%d", &(mat.n));
-    mat.A[mat.n];
-
-    for (int i = 1; i<=mat.n; i++){
-        printf("Element (%d, %d): \n", i, i);
-        int num;
-        scanf("%d", &num);
-        Set(&mat, i,i,num);
-    }
-
-    Display(mat);
-    return 0;
+Diagonal::~Diagonal() {
+    delete[] A;
 }
