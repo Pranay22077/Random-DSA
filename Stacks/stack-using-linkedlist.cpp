@@ -12,25 +12,47 @@ class Node{
 };
 
 class Stack{
-    private:
+    public:
+    int count = 0;
     Node *top;
     int size;
-    Node *n;
     Stack(int size){
         this -> size = size;
+        top = nullptr;
     }
     void Push(int element);
     void Pop();
     void Display();
-    ~ Stack();
 };
 
 void Stack :: Push(int element){
-    if (top != nullptr){
+    if (count < size){
         Node *nn = new Node(element);
         nn -> next = top;
         top = nn;
+        count ++;
     } else{
-        cout << "Stack overflow!";
+        cout << "Stack overflow! \n";
     }
+}
+
+void Stack :: Display(){
+    Node *p = top;
+    while (p!= NULL){
+        cout << "|   " << p -> data << "   |";
+        if ( p == top){
+            printf (" <-- Top");
+        }
+        cout << endl;
+        p = p->next;
+    }
+    cout << "---------------";
+}
+
+int main(){
+    Stack s(2);
+    s.Push(5);
+    s.Push(10);
+    s.Push(16);
+    s.Display();
 }
