@@ -10,7 +10,7 @@ public:
     Queue(int val) {
         size = val;
         A = new int[size];
-        p = q = A - 1;
+        p = q = A;
     }
 
     void enqueue(int num);
@@ -22,7 +22,7 @@ public:
 };
 
 void Queue::enqueue(int num) {
-    if (q >= A + size - 1) {
+    if ((*(q + 1)%size) + 1 == *p) {
         cout << "Queue overflow!" << endl;
         return;
     }
@@ -72,18 +72,22 @@ int main() {
     Q.enqueue(9);
     Q.display();
     Q.enqueue(11); 
-
+    Q.display();
     Q.dequeue();
+       Q.display();
     Q.dequeue();
     Q.display();
     Q.dequeue();
+       Q.display();
     Q.dequeue();
     Q.display();
     Q.dequeue();
+       Q.display();
     Q.dequeue();
     Q.display();
 
     Q.enqueue(5);
+       Q.display();
     Q.enqueue(10);
     Q.display();
 
