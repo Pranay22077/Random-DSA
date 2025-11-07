@@ -1,0 +1,27 @@
+# Compiled executables
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# Java compiled files
+*.class
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+a.exe
+tempCodeRunnerFile.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build directories
+build/
+bin/
+dist/
