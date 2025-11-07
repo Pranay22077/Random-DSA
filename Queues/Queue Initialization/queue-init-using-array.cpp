@@ -16,8 +16,6 @@ class Queue{
     }
     void enqueue(int num);
     void dequeue();
-    bool isFull();
-    bool isEmpty();
 
     ~ Queue(){
         delete []A;
