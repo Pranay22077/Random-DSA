@@ -61,6 +61,7 @@ void Queue::display() {
 
 int main() {
     Queue Q(5);
+    
     Q.enqueue(2);
     Q.enqueue(3);
     Q.display();
@@ -71,23 +72,30 @@ int main() {
 
     Q.enqueue(9);
     Q.display();
+
     Q.enqueue(11); 
     Q.display();
-    Q.dequeue();
-       Q.display();
-    Q.dequeue();
-    Q.display();
-    Q.dequeue();
-       Q.display();
+
     Q.dequeue();
     Q.display();
+
     Q.dequeue();
-       Q.display();
+    Q.display();
+
+    Q.dequeue();
+    Q.display();
+
+    Q.dequeue();
+    Q.display();
+
+    Q.dequeue();
+    Q.display();
+
     Q.dequeue();
     Q.display();
 
     Q.enqueue(5);
-       Q.display();
+    Q.display();
     Q.enqueue(10);
     Q.display();
 
