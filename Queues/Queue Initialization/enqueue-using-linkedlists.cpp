@@ -18,7 +18,7 @@ class LinkedList{
     void Create(int size);
     void Display();
     void enqueue(int element);
-    int deqeue();
+    int dequeue();
 };
 
 LinkedList :: LinkedList(){
