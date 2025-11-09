@@ -51,8 +51,8 @@ void LinkedList :: enqueue(int element){
     if (temp == nullptr){
         cout << "Queue is full!";
     } else{
-        temp -> next = front;
-        front = temp;
+        rear -> next = temp;
+        rear = temp;
     }
 }
 
