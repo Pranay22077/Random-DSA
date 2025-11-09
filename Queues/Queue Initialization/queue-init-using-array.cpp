@@ -2,10 +2,9 @@
 using namespace std;
 
 class Queue{
-    private:
+    public:
     int size;
     int *A;
-    public:
     int *p, *q;
     int top;
     Queue(int val){
