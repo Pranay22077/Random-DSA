@@ -2,6 +2,7 @@
 #define QUEUE_H
 #include <iostream>
 class Node{
+    public:
     int data;
     Node *lchild, *rchild;
     Node(int data){
