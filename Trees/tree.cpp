@@ -9,6 +9,8 @@ class BTree{
     void Create();
     void Display();
     void Preorder(Node *p);
+    void Postorder(Node *p);
+    void Inorder(Node *p);
 };
 
 BTree :: BTree(){
@@ -19,6 +21,22 @@ void BTree :: Preorder(Node *p){
     if (p){
         printf(" %d ", p->data);
         Preorder(p -> lchild);
+        Preorder(p -> rchild);
+    }
+}
+
+void BTree :: Postorder(Node *p){
+    if (p){
+        Preorder(p -> lchild);
+        Preorder(p -> rchild);
+        printf(" %d ", p->data);
+    }
+}
+
+void BTree :: Inorder(Node *p){
+    if (p){
+        Preorder(p -> lchild);
+        printf(" %d ", p->data);
         Preorder(p -> rchild);
     }
 }
@@ -58,6 +76,16 @@ void BTree :: Create(){
 
 int main(){
     BTree t;
+    cout << "Preorder traversal: " << endl;
     t.Preorder(t.root);
+    cout << endl;
+
+    cout << "Inorder traversal: " << endl;
+    t.Inorder(t.root);
+    cout << endl;
+
+    cout << "Postorder traversal: " << endl;
+    t.Postorder(t.root);
+    cout << endl;
     return 0;
 }
