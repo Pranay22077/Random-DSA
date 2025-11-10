@@ -5,59 +5,68 @@ class Queue {
 public:
     int size;
     int *A;
-    int *p, *q;
+    int p,q;
 
     Queue(int val) {
         size = val;
         A = new int[size];
-        p = q = A;
+        p = q = 0;
     }
 
     void enqueue(int num);
     int dequeue();
     void display();
+    bool isFull();
+    bool isEmpty();
     ~Queue() {
         delete[] A;
     }
 };
 
-void Queue::enqueue(int num) {
-    if ((*(q + 1)%size) + 1 == *p) {
+bool Queue :: isFull(){
+    return (q+1)% size == p;
+}
+
+bool Queue :: isEmpty(){
+    return p == q;
+}
+
+void Queue :: enqueue(int num) {
+    if (isFull()) {
         cout << "Queue overflow!" << endl;
         return;
     }
-    q++;
-    *q = num;
+    q = (q+1)%size;
+    A[q] = num;
 }
 
 int Queue :: dequeue(){
-    if (q == p){
+    if (isEmpty()){
         cout  << "Can't perform Dequeue operation, Stack underflow!";
         return -1;
     } else {
-        int deq = *(p+1);
-        *(p+1) = -1;
-        p++;
+        p = (p+1)%size;
+        int deq = A[p];
+        A[p] = -1;
         return deq;
     }
 }
 
 void Queue::display() {
-    if (q == p) {
+    if (isEmpty()) {
         cout << "Queue is empty!" << endl;
         return;
     }
 
-    cout << "\nQueue State:\n";
-    for (int *temp = p + 1; temp <= q; temp++) {
-        if (temp == p + 1)
-            cout << "Front -->  | ";
-        cout <<*temp << " |  ";
-        if (temp == q)
-            cout << "<-- Rear";
+    cout << "\nQueue State:\nFront --> ";
+    int i = (p + 1) % size;
+    while (i != (q + 1) % size) {
+        cout << "| " << A[i] << " | ";
+        i = (i + 1) % size;
     }
-    cout << endl;
+    cout << "<-- Rear\n";
 }
+
 
 int main() {
     Queue Q(5);
