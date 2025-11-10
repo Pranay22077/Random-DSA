@@ -8,10 +8,19 @@ class BTree{
     BTree();
     void Create();
     void Display();
+    void Preorder(Node *p);
 };
 
 BTree :: BTree(){
     Create();
+}
+
+void BTree :: Preorder(Node *p){
+    if (p){
+        printf(" %d ", p->data);
+        Preorder(p -> lchild);
+        Preorder(p -> rchild);
+    }
 }
 
 void BTree :: Create(){
@@ -49,5 +58,6 @@ void BTree :: Create(){
 
 int main(){
     BTree t;
+    t.Preorder(t.root);
     return 0;
 }
