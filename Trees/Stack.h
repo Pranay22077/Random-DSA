@@ -10,11 +10,11 @@ class Stack{
     int size;
     Node **A;
     Stack(int size){
-        this -> size - size;
+        this -> size = size;
         top = -1;
         A = new Node*[size];
     }
-    void push(int element);
+    void push(Node* element);
     Node * pop();
     bool isEmpty(){
         return top == -1;

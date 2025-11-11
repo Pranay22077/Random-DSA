@@ -8,6 +8,7 @@ void Stack :: push(Node* element){
 }
 
 Node* Stack :: pop(){
-    return A[top];
+    Node* temp = A[top];
     top --;
+    return temp;
 }
