@@ -103,8 +103,7 @@ Random-DSA/
 ├── Recursion/
 ├── Matrices/
 ├── Trees/
-├── Java-Programs/
-└── miscellaneous/
+└── Java-Programs/
 ```
 
 ## Contributing
