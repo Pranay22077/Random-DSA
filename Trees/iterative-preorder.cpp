@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include "Queue.h"
 #include "Stack.h"
 
 class BTree{
@@ -22,13 +23,12 @@ void BTree :: Preorder(Node *p){
     p = root;
     s.push(p);
     while (!s.isEmpty()){
-        if (p){
+        if (p != nullptr){
             printf(" %d ",p -> data);
+            s.push(p);
             p = p -> lchild;
-        }
-        if (!p){
+        }else {
             p = s.pop();
-            printf(" %d ",p -> data);
             p = p -> rchild;
         }
     }
