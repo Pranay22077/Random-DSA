@@ -84,8 +84,8 @@ void LinkedList :: reverse(){
     p  = head;
     q = r = nullptr;
     while (p!= nullptr){
-        q = p;
         r = q;
+        q = p;
         p = p -> next;
         q -> next = r;
     }
