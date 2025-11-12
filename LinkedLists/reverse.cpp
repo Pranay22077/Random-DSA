@@ -89,6 +89,7 @@ void LinkedList :: reverse(){
         p = p -> next;
         q -> next = r;
     }
+    head = q;
 }
 
 // void LinkedList :: interchange(){
