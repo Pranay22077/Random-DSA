@@ -5,7 +5,6 @@ class Node{
     public: 
     int data;
     Node *next;
-
     Node(int val){
         data = val;
         next = nullptr;
@@ -45,24 +44,6 @@ void LinkedList :: Create(int elements){
     }
 };
 
-void LinkedList :: Display(){
-    Node *p = head;
-    while (p != NULL){
-        cout << p -> data << " --> ";
-        p = p -> next;
-    }
-    cout << "NULL" << endl;
-}
-
-LinkedList :: ~LinkedList(){
-    Node *temp;
-    while(head != NULL){
-        temp = head;
-        head = head -> next;
-        delete temp;
-    }
-}
-
 bool LinkedList :: isSorted(Node *pointer){
     Node *q = pointer -> next;
     while (q != nullptr){
@@ -87,13 +68,33 @@ void LinkedList :: rm_duplicate(){
     while (p!= nullptr){
         if (q -> data == p -> data){
             q -> next = p -> next;
-            delete p;
             p = p -> next;
         }
         q = p;
         p = p -> next;
     }
 }
+
+void LinkedList :: Display(){
+    Node *p = head;
+    while (p != NULL){
+        cout << p -> data << " --> ";
+        p = p -> next;
+    }
+    cout << "NULL" << endl;
+}
+
+
+LinkedList :: ~LinkedList(){
+    Node *temp;
+    while(head != NULL){
+        temp = head;
+        head = head -> next;
+        delete temp;
+    }
+}
+
+
 
 int main(){
     LinkedList list(5);
