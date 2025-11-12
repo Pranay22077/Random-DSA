@@ -23,7 +23,7 @@ class LinkedList{
     void Display();
     bool isSorted(Node *p);
     bool issorted();
-    void duplicate();
+    void reverse();
     void interchange();
     ~ LinkedList();
 };
@@ -79,34 +79,34 @@ bool LinkedList :: issorted(){
     return isSorted(head);
 }
 
-void LinkedList :: duplicate(){
+void LinkedList :: reverse(){
     Node *p, *q, *r;
     p  = head;
     q = r = nullptr;
     while (p!= nullptr){
-        r = q;
         q = p;
+        r = q;
         p = p -> next;
         q -> next = r;
     }
 }
 
-void LinkedList :: interchange(){
-    Queue q1(50);
-    Node *p, *q;
-    p = q = head;
-    while (q!= nullptr){
-        q1.enqueue(q);
-        q = q -> next;
-    }
-    while (p != q){
-        int temp = p -> data;
-        p -> data = q -> data;
-        q -> data = temp;
-        p = p -> next;
-        q = q1.dequeue();
-    }
-}
+// void LinkedList :: interchange(){
+//     Queue q1(50);
+//     Node *p, *q;
+//     p = q = head;
+//     while (q!= nullptr){
+//         q1.enqueue(q);
+//         q = q -> next;
+//     }
+//     while (p != q){
+//         int temp = p -> data;
+//         p -> data = q -> data;
+//         q -> data = temp;
+//         p = p -> next;
+//         q = q1.dequeue();
+//     }
+// }
 
 int main(){
     LinkedList list(5);
@@ -120,7 +120,7 @@ int main(){
     } else {
         cout << "The list is not sorted!";
     }
-    list.duplicate();
+    list.reverse();
     list.Display();
 
     return 0;
