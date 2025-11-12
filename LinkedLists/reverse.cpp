@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-#include "Queue.h"
 class Node{
     public: 
     int data;
@@ -24,7 +23,7 @@ class LinkedList{
     void Display();
     bool isSorted(Node *p);
     bool issorted();
-    void rm_duplicate();
+    void duplicate();
     void interchange();
     ~ LinkedList();
 };
@@ -80,7 +79,7 @@ bool LinkedList :: issorted(){
     return isSorted(head);
 }
 
-void LinkedList :: rm_duplicate(){
+void LinkedList :: duplicate(){
     Node *p, *q;
     p  = head;
     q = p;
@@ -124,7 +123,7 @@ int main(){
     } else {
         cout << "The list is not sorted!";
     }
-    list.rm_duplicate();
+    list.duplicate();
     list.Display();
 
     return 0;
