@@ -80,17 +80,14 @@ bool LinkedList :: issorted(){
 }
 
 void LinkedList :: duplicate(){
-    Node *p, *q;
+    Node *p, *q, *r;
     p  = head;
-    q = p;
-    p = p -> next;
+    q = r = nullptr;
     while (p!= nullptr){
-        if (q -> data == p -> data){
-            q -> next = p -> next;
-            p = p -> next;
-        }
+        r = q;
         q = p;
         p = p -> next;
+        q -> next = r;
     }
 }
 
