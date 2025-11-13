@@ -23,7 +23,7 @@ class LinkedList{
 
 void LinkedList :: Create(){
     Node *p = nullptr;
-    cout << "Enter the number of elements in the circular linked-list: ";
+    cout << "Enter the number of elements in the doubly linked-list: ";
     int num;
     cin >> num;
     for (int i = 0; i<num; i++){
@@ -37,7 +37,8 @@ void LinkedList :: Create(){
             p = head;
         } else {
             p -> next = temp;
-            p -> next -> prev = p;
+            temp -> prev = p;
+            p = p -> next;
         }
     }
 }
@@ -45,8 +46,16 @@ void LinkedList :: Create(){
 void LinkedList :: Display(){
     Node *ptr = head;
     while (ptr != nullptr){
-        cout << ptr -> data << " --> ";
+        cout << ptr -> data << " <--> ";
         ptr = ptr -> next;
     }
     cout << "NULL";
+}
+
+int main(){
+    LinkedList list;
+    list.Create();
+    list.Display();
+
+    return 0;
 }
