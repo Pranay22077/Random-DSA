@@ -69,8 +69,7 @@ void BTree :: Create(){
             t -> lchild = t -> rchild = nullptr;
             p -> rchild = t;
             q.enqueue(t);
-            }
-        
+            }        
     }
 }
 

@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class Node{
     public:
     int data;
@@ -35,12 +34,10 @@ void Stack :: Push(int element){
         cout << "Stack overflow! \n";
     }
 }
-
 void Stack :: Pop(){
     top = top -> next;
     count --;
 }
-
 void Stack :: Display(){
     Node *p = top;
     while (p!= NULL){
