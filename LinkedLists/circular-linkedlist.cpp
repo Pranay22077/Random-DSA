@@ -33,7 +33,7 @@ void LinkedList :: Create(){
         Node* temp = new Node(temp_data);
         if (head == nullptr){
             head = temp;
-            head -> next = nullptr;
+            head -> next = head;
             p = head;
         } else {
             p -> next = temp;
@@ -49,7 +49,6 @@ void LinkedList :: Display(){
         cout << ptr -> data << " --> ";
         ptr = ptr -> next;
     } while (ptr != head);
-    cout << ptr -> data ;
     cout << "(Reached Head!)";
 }
 

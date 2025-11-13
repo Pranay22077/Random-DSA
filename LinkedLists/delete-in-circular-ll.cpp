@@ -17,6 +17,7 @@ class LinkedList{
     void Create();
     void Display();
     void Insert();
+    void Delete();
     ~LinkedList(){
         delete head;
     }
@@ -54,15 +55,31 @@ void LinkedList :: Insert(){
     cin >> pos;
 
     Node *nn = new Node(element);
-    
-    Node *p = head;
-    for (int i = 0; i < pos - 1; i++){
-        p = p -> next;
-    }
-    nn -> next = p -> next;
-    p -> next = nn;
+    if (pos == 0){
+        nn -> next = head -> next;
+        head = nn;
+    } else {
+        Node *p = head;
+        for (int i = 0; i < pos - 1; i++){
+            p = p -> next;
+        }
+        nn -> next = p -> next;
+        p -> next = nn;
 
     }
+}
+
+void LinkedList :: Delete(){
+    cout << "Enter the position at which the element needs to be deleted (starting index: 0): ";
+    int pos;
+    cin >> pos;
+    Node*p=  head;
+    for (int i = 0; i < pos-1; i++){
+        p = p -> next;
+    }
+    p -> next = p -> next -> next;
+
+}
 
 void LinkedList :: Display(){
     Node *ptr = head;
@@ -79,5 +96,8 @@ int main(){
     list.Display();
 
     list.Insert();
+    list.Display();
+
+    list.Delete();
     list.Display();
 }
