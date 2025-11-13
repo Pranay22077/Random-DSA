@@ -61,7 +61,7 @@ void BTree :: Create(){
             } else if (val > p -> data){
                 q = p;
                 p = p -> rchild;
-            }
+            };
         }
         Node *nn = new Node(val);
         if (val < q -> data){
@@ -73,7 +73,6 @@ void BTree :: Create(){
         q = nullptr;
     }
 }
-
 int main(){
     BTree t;
     t.Create();
