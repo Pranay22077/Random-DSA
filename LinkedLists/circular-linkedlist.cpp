@@ -14,7 +14,6 @@ class Node{
 class LinkedList{
     public:
     Node *head = nullptr;
-    LinkedList();
     void Create();
     void Display();
     ~LinkedList(){
@@ -28,7 +27,10 @@ void LinkedList :: Create(){
     int num;
     cin >> num;
     for (int i = 0; i<num; i++){
-        Node* temp = new Node(num);
+        cout << "Enter element "<< i+1 << ": ";
+        int temp_data;
+        cin >> temp_data;
+        Node* temp = new Node(temp_data);
         if (head == nullptr){
             head = temp;
             head -> next = nullptr;
@@ -45,6 +47,14 @@ void LinkedList :: Display(){
     Node *ptr = head;
     do{
         cout << ptr -> data << " --> ";
+        ptr = ptr -> next;
     } while (ptr != head);
-    cout << "NULL";
+    cout << ptr -> data ;
+    cout << "(Reached Head!)";
+}
+
+int main(){
+    LinkedList list;
+    list.Create();
+    list.Display();
 }
