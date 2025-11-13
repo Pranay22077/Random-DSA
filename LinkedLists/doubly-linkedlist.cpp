@@ -39,4 +39,14 @@ void LinkedList :: Create(){
             p -> next = temp;
             p -> next -> prev = p;
         }
+    }
+}
+
+void LinkedList :: Display(){
+    Node *ptr = head;
+    while (ptr != nullptr){
+        cout << ptr -> data << " --> ";
+        ptr = ptr -> next;
+    }
+    cout << "NULL";
 }
