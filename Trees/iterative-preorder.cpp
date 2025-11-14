@@ -10,8 +10,6 @@ class BTree{
     void Create();
     void Display();
     void Preorder(Node *p);
-    void Postorder(Node *p);
-    void Inorder(Node *p);
 };
 
 BTree :: BTree(){
