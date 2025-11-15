@@ -12,7 +12,7 @@ void Insert(int A[], int n){
 }
 
 int main(){
-    int H[] = {0, 40, 25, 10, 15, 30, 35, 5};
+    int H[] = {0, 40, 25, 10, 15, 30, 5, 35};
     for (int i = 2; i< 8; i++){
         Insert(H, i);
     }
