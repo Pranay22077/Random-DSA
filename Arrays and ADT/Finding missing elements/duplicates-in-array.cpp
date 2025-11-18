@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int A[] = {3,6,8,8,10,12,15,15,15, 20};
+    int A[] = {3,6,8,8,10,12,1,1,1, 20};
     int record = A[0];
     for (int i = 0; i < 10; i++){
         if (A[i] != record){
