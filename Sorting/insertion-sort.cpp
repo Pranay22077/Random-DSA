@@ -2,7 +2,6 @@
 using namespace std;
 
 void insertion_sort(int A[], int size){
-    cout << size << endl;
     for (int i = 1; i < size; i++){
         int temp = A[i];
         int j = i-1;
