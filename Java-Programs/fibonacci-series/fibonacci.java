@@ -9,9 +9,10 @@ public class fibonacci {
         int terms = sc.nextInt();
         int prev = 0;
         int curr = 1;
+        int next;
         System.out.print(prev + " " + curr + " ");
         for (int i = 1; i <= terms; i++){
-            int next = prev + curr;
+            next = prev + curr;
             System.out.print(next + " ");
             prev = curr; 
             curr = next; 
