@@ -8,7 +8,6 @@ A collection of Data Structures and Algorithms implementations in C++ and Java. 
 ![GitHub forks](https://img.shields.io/github/forks/Pranay22077/Random-DSA?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/Pranay22077/Random-DSA?style=social)
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Pranay22077&theme=dark)](https://github.com/Pranay22077)
 
 [![GitHub license](https://img.shields.io/github/license/Pranay22077/Random-DSA?color=blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Pranay22077/Random-DSA/pulls)
