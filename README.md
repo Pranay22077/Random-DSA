@@ -1,6 +1,6 @@
 <div align="center">
 
-# Random DSA
+# Random DSA - Pranay
 
 A collection of Data Structures and Algorithms implementations in C++ and Java. This repository serves as my personal practice ground for DSA concepts and is organized by topic.
 
