@@ -57,8 +57,8 @@ LinkedList :: ~LinkedList(){
 
 int main(){
     LinkedList list(5);
-    int n;
     cout << "How many elements to insert in the list (after 5): ";
+    int n;
     cin >> n;
 
     list.Create(n);
