@@ -23,7 +23,7 @@ void Diagonal::Display() {
             if (i == j)
                 cout << A[i] << " ";
             else
-                cout << "0 ";
+                printf("0 ");
         }
         cout << endl;
     }
