@@ -3,12 +3,12 @@ using namespace std;
 
 int main(){
     char str[] = "pranay";
-    int i,j;
+    int i;
     for (i = 0; str[i] != '\0'; i++){
     }
     i = i-1;
     char str_cpy[10];
-    for ( j = 0; i != -1; i--,j++){
+    for (int j = 0; i != -1; i--,j++){
         str_cpy[j] = str[i];
     }
     str_cpy[j] = '\0';
