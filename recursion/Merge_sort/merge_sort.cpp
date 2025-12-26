@@ -48,7 +48,7 @@ void mergeSort(vector<int>& arr, int left, int right) {
 }
 
 int main() {
-    std::vector<int> data = {12, 11, 13, 5, 6, 7};
+    std::vector<int> data = {12, 11, 13, 5, 6, 79};
     mergeSort(data, 0, data.size() - 1);
     std::cout << "Sorted array is:" << endl;
     for (int val : data) {
