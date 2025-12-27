@@ -3,7 +3,7 @@ public class gcd_and_lcm{
     public static void main(String[] args) {
         System.out.println("Program start....");
         System.out.println("====== GCD & LCM =====");
-        System.out.print("Enter first number (integers only): ");
+        System.out.print("Enter first number: ");
         Scanner sc = new Scanner(System.in);
         int num1 = sc.nextInt();
 
