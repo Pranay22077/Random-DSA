@@ -238,13 +238,6 @@ Contributions are what make the open-source community such an amazing place to l
 
 ---
 
-## 👤 Author
-
-**Pranay**
-
-- GitHub: [@Pranay22077](https://github.com/Pranay22077)
-- Repository: [Random-DSA](https://github.com/Pranay22077/Random-DSA)
-
 ---
 
 ## 📝 License
