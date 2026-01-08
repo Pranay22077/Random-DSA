@@ -10,7 +10,6 @@
 
 [![GitHub license](https://img.shields.io/github/license/Pranay22077/Random-DSA?color=blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Made with Love](https://img.shields.io/badge/Made%20with-♥-red.svg)](https://github.com/Pranay22077)
 
 *Beautifully organized implementations of fundamental DSA concepts in Java and C++*
 
@@ -237,13 +236,6 @@ Contributions are what make the open-source community such an amazing place to l
 - Test your code before submitting
 
 ---
-
-## 👤 Author
-
-**Pranay**
-
-- GitHub: [@Pranay22077](https://github.com/Pranay22077)
-- Repository: [Random-DSA](https://github.com/Pranay22077/Random-DSA)
 
 ---
 

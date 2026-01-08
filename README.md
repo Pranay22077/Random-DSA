@@ -1,8 +1,8 @@
 <div align="center">
 
-# Random DSA - Pranay
+# Random DSA
 
-A collection of Data Structures and Algorithms implementations in C++ and Java. This repository serves as my personal practice ground for DSA concepts and is organized by topic.
+A collection of Data Structures and Algorithms implementations in C++ and Java. This repository serves as a practice ground for DSA concepts and is organized by topic.
 
 ![GitHub stars](https://img.shields.io/github/stars/Pranay22077/Random-DSA?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Pranay22077/Random-DSA?style=social)
@@ -142,13 +142,6 @@ Feel free to:
 - Most implementations are educational and focus on clarity over optimization
 - Some programs may have multiple approaches to the same problem
 - Code style may vary as this represents learning progress over time
-
-## Author
-
-**Pranay**
-
-- GitHub: [@Pranay22077](https://github.com/Pranay22077)
-- Repository: [Random-DSA](https://github.com/Pranay22077/Random-DSA)
 
 ---
 
